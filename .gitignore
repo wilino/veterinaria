@@ -1,0 +1,19 @@
+# Material de referencia y documentación local
+/docs/
+/Mockups/
+
+# Sistema operativo y editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Dependencias y artefactos de compilación
+node_modules/
+dist/
+coverage/
+
+# Variables y archivos locales sensibles
+.env
+.env.*
+!.env.example
