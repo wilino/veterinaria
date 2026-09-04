@@ -1,0 +1,107 @@
+/* Landing page composition. */
+
+.vc-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9ff 0%, #effcf7 54%, #e6f8fd 100%);
+}
+
+.vc-hero::after {
+  position: absolute;
+  top: -8rem;
+  right: -8rem;
+  width: 22rem;
+  height: 22rem;
+  pointer-events: none;
+  content: "";
+  background: rgba(133, 248, 196, 0.24);
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.vc-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.vc-kicker {
+  margin-bottom: var(--vc-space-sm);
+  color: var(--vc-color-primary);
+  font-size: var(--vc-text-label-md);
+  font-weight: var(--vc-font-weight-bold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.vc-clinical-preview {
+  padding: clamp(1.25rem, 3vw, 2rem);
+  background: var(--vc-color-surface);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  border-radius: var(--vc-radius-large);
+  box-shadow: var(--vc-shadow-3);
+}
+
+.vc-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  color: #fff;
+  background: var(--vc-color-primary);
+  border-radius: var(--vc-radius-control);
+}
+
+.vc-appointment-preview {
+  display: flex;
+  gap: var(--vc-space-sm);
+  align-items: center;
+  padding: var(--vc-space-sm) 0;
+  border-top: 1px solid #f1f5f9;
+}
+
+.vc-appointment-preview > i {
+  font-size: 1.25rem;
+}
+
+.vc-appointment-preview strong,
+.vc-appointment-preview span {
+  display: block;
+}
+
+.vc-appointment-preview span {
+  margin-top: 0.125rem;
+  color: var(--vc-color-text-muted);
+  font-size: var(--vc-text-body-sm);
+}
+
+.vc-feature {
+  height: 100%;
+  padding: 1.5rem;
+  background: var(--vc-color-surface);
+  border: 1px solid var(--vc-color-border);
+  border-radius: var(--vc-radius-panel);
+  box-shadow: var(--vc-shadow-1);
+}
+
+.vc-feature > i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: var(--vc-space-md);
+  color: var(--vc-color-secondary);
+  font-size: 1.25rem;
+  background: var(--vc-color-secondary-container);
+  border-radius: var(--vc-radius-control);
+}
+
+.vc-feature p {
+  margin-bottom: 0;
+  color: var(--vc-color-text-muted);
+}

@@ -1,0 +1,7 @@
+/* Administrative portal. The chart placeholder can be replaced by Chart.js later. */
+
+.vc-chart-placeholder span {
+  padding: var(--vc-space-xs) var(--vc-space-sm);
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: var(--vc-radius-control);
+}

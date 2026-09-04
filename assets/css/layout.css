@@ -1,0 +1,286 @@
+/* Public and authenticated application shells. */
+
+.vc-page {
+  min-height: 100vh;
+}
+
+.vc-container {
+  width: min(100% - (var(--vc-gutter) * 2), var(--vc-container-max));
+  margin-inline: auto;
+}
+
+.vc-public-header {
+  position: sticky;
+  z-index: 1020;
+  top: 0;
+  min-height: var(--vc-topbar-height);
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.vc-public-main {
+  min-width: 0;
+}
+
+.vc-section {
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.vc-section--muted {
+  background: var(--vc-color-surface-low);
+}
+
+.vc-footer {
+  color: #eaf1ff;
+  background: var(--vc-color-navy);
+}
+
+/* Internal portal shell. Sidebar is persistent only from the desktop breakpoint. */
+.vc-app-shell,
+.vc-app {
+  min-height: 100vh;
+  background: var(--vc-color-canvas);
+}
+
+.vc-sidebar {
+  width: var(--vc-sidebar-width);
+  color: var(--vc-color-text);
+  background: var(--vc-color-surface);
+  border-right: 1px solid var(--vc-color-border);
+}
+
+.vc-sidebar__brand {
+  display: flex;
+  align-items: center;
+  min-height: var(--vc-topbar-height);
+  padding: var(--vc-space-md);
+  color: var(--vc-color-primary);
+  border-bottom: 1px solid var(--vc-color-border);
+}
+
+.vc-sidebar__nav {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--vc-space-xxs);
+  padding: var(--vc-space-sm);
+  overflow-y: auto;
+}
+
+.vc-sidebar__section {
+  margin: var(--vc-space-md) var(--vc-space-xs) var(--vc-space-xxs);
+  color: var(--vc-color-text-muted);
+}
+
+.vc-sidebar__link {
+  display: flex;
+  align-items: center;
+  gap: var(--vc-space-sm);
+  min-height: 2.75rem;
+  padding: var(--vc-space-xs) var(--vc-space-sm);
+  color: var(--vc-color-text-subtle);
+  font-size: var(--vc-text-body-md);
+  font-weight: var(--vc-font-weight-medium);
+  text-decoration: none;
+  border-radius: var(--vc-radius-control);
+  transition:
+    color var(--vc-transition),
+    background-color var(--vc-transition);
+}
+
+.vc-sidebar__link:hover,
+.vc-sidebar__link:focus-visible {
+  color: var(--vc-color-text);
+  background: var(--vc-color-surface-low);
+}
+
+.vc-sidebar__link[aria-current="page"],
+.vc-sidebar__link.is-active {
+  color: #fff;
+  background: var(--vc-color-primary);
+  box-shadow: 0 2px 4px rgba(5, 150, 105, 0.2);
+}
+
+.vc-app-content,
+.vc-main-content {
+  min-width: 0;
+}
+
+.vc-topbar {
+  display: flex;
+  align-items: center;
+  min-height: var(--vc-topbar-height);
+  padding-inline: var(--vc-gutter);
+  background: var(--vc-color-surface);
+  border-bottom: 1px solid var(--vc-color-border);
+}
+
+.vc-main,
+.vc-main-content {
+  min-width: 0;
+  padding: var(--vc-gutter);
+}
+
+.vc-main__inner {
+  width: min(100%, var(--vc-container-max));
+  margin-inline: auto;
+}
+
+.vc-page-heading {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--vc-space-md);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--vc-space-lg);
+}
+
+.vc-breadcrumb {
+  --bs-breadcrumb-divider-color: var(--vc-color-text-muted);
+  margin-bottom: var(--vc-space-xs);
+  font-size: var(--vc-text-body-sm);
+}
+
+.vc-offcanvas {
+  --bs-offcanvas-width: min(var(--vc-sidebar-width), 88vw);
+  color: #eaf1ff;
+  background: var(--vc-color-navy);
+}
+
+.vc-offcanvas .btn-close {
+  filter: invert(1) grayscale(1) brightness(2);
+}
+
+@media (min-width: 1200px) {
+  .vc-app-shell,
+  .vc-app-layout {
+    display: grid;
+    grid-template-columns: var(--vc-sidebar-width) minmax(0, 1fr);
+  }
+
+  .vc-sidebar {
+    position: fixed;
+    z-index: 1030;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  /* Supports the lightweight page template where the loaded sidebar is a
+     sibling of .vc-app instead of being nested in .vc-app-shell. */
+  [data-partial="sidebar"] + .vc-app {
+    min-height: 100vh;
+    margin-left: var(--vc-sidebar-width);
+  }
+
+  body.vc-sidebar-collapsed [data-partial="sidebar"] .vc-sidebar {
+    width: var(--vc-sidebar-collapsed-width);
+  }
+
+  body.vc-sidebar-collapsed [data-partial="sidebar"] + .vc-app {
+    margin-left: var(--vc-sidebar-collapsed-width);
+  }
+
+  body.vc-sidebar-collapsed [data-partial="sidebar"] .vc-sidebar__brand,
+  body.vc-sidebar-collapsed [data-partial="sidebar"] .vc-sidebar__link {
+    justify-content: center;
+    padding-inline: var(--vc-space-xs);
+  }
+
+  body.vc-sidebar-collapsed [data-partial="sidebar"] .vc-sidebar__label,
+  body.vc-sidebar-collapsed [data-partial="sidebar"] .vc-sidebar__section {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .vc-sidebar-toggle,
+  .vc-mobile-menu-toggle {
+    display: none;
+  }
+
+  .vc-app-shell.is-sidebar-collapsed,
+  .vc-app-layout.vc-sidebar-collapsed {
+    grid-template-columns: var(--vc-sidebar-collapsed-width) minmax(0, 1fr);
+  }
+
+  .vc-app-shell.is-sidebar-collapsed .vc-sidebar,
+  .vc-app-layout.vc-sidebar-collapsed .vc-sidebar {
+    width: var(--vc-sidebar-collapsed-width);
+  }
+
+  .vc-app-shell.is-sidebar-collapsed .vc-sidebar__brand,
+  .vc-app-shell.is-sidebar-collapsed .vc-sidebar__link,
+  .vc-app-layout.vc-sidebar-collapsed .vc-sidebar__brand,
+  .vc-app-layout.vc-sidebar-collapsed .vc-sidebar__link {
+    justify-content: center;
+    padding-inline: var(--vc-space-xs);
+  }
+
+  .vc-app-shell.is-sidebar-collapsed .vc-sidebar__label,
+  .vc-app-shell.is-sidebar-collapsed .vc-sidebar__section,
+  .vc-app-layout.vc-sidebar-collapsed .vc-sidebar__label,
+  .vc-app-layout.vc-sidebar-collapsed .vc-sidebar__section {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .vc-sidebar--desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .vc-topbar,
+  .vc-main,
+  .vc-main-content {
+    padding-inline: var(--vc-gutter);
+  }
+
+  .vc-main,
+  .vc-main-content {
+    padding-block: var(--vc-space-md);
+  }
+
+  .vc-page-heading {
+    align-items: stretch;
+    margin-bottom: var(--vc-space-md);
+  }
+
+  .vc-sticky-actions {
+    position: sticky;
+    z-index: 1010;
+    bottom: 0;
+    display: flex;
+    gap: var(--vc-space-xs);
+    padding: var(--vc-space-sm);
+    margin: var(--vc-space-md) calc(var(--vc-gutter) * -1)
+      calc(var(--vc-gutter) * -1);
+    background: rgba(255, 255, 255, 0.96);
+    border-top: 1px solid var(--vc-color-border);
+    box-shadow: 0 -8px 20px rgba(15, 23, 42, 0.06);
+    backdrop-filter: blur(8px);
+  }
+
+  .vc-sticky-actions > * {
+    flex: 1 1 0;
+  }
+}

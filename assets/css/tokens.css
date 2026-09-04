@@ -1,0 +1,129 @@
+/**
+ * VetCare Pro design tokens.
+ * Load this file after Bootstrap so its CSS custom properties become the
+ * application defaults without changing Bootstrap source files.
+ */
+:root {
+  /* Typography */
+  --vc-font-sans:
+    "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  --vc-font-size-body: 0.875rem;
+  --vc-line-height-body: 1.4286;
+  --vc-font-weight-regular: 400;
+  --vc-font-weight-medium: 500;
+  --vc-font-weight-semibold: 600;
+  --vc-font-weight-bold: 700;
+
+  --vc-text-display: clamp(1.75rem, 1.5rem + 1.25vw, 2.25rem);
+  --vc-text-headline-lg: 1.75rem;
+  --vc-text-headline-md: 1.375rem;
+  --vc-text-headline-sm: 1.125rem;
+  --vc-text-title: 1rem;
+  --vc-text-body-lg: 1rem;
+  --vc-text-body-md: 0.875rem;
+  --vc-text-body-sm: 0.8125rem;
+  --vc-text-label-md: 0.75rem;
+  --vc-text-label-sm: 0.6875rem;
+
+  /* Brand and surfaces */
+  --vc-color-primary: #059669;
+  --vc-color-primary-hover: #047857;
+  --vc-color-primary-active: #065f46;
+  --vc-color-primary-container: #d1fae5;
+  --vc-color-primary-fixed: #85f8c4;
+  --vc-color-primary-on-container: #064e3b;
+  --vc-color-secondary: #0891b2;
+  --vc-color-secondary-hover: #0e7490;
+  --vc-color-secondary-container: #cffafe;
+  --vc-color-navy: #0f172a;
+  --vc-color-navy-muted: #1e293b;
+  --vc-color-canvas: #f8f9ff;
+  --vc-color-surface: #ffffff;
+  --vc-color-surface-low: #f1f5f9;
+  --vc-color-surface-container: #e5eeff;
+  --vc-color-surface-high: #dce9ff;
+  --vc-color-text: #0b1c30;
+  --vc-color-text-muted: #64748b;
+  --vc-color-text-subtle: #3d4a42;
+  --vc-color-outline: #64748b;
+  --vc-color-border: #e2e8f0;
+  --vc-color-border-strong: #cbd5e1;
+
+  /* Semantic status colors */
+  --vc-color-success: #059669;
+  --vc-color-success-bg: #ecfdf5;
+  --vc-color-success-border: #a7f3d0;
+  --vc-color-warning: #b45309;
+  --vc-color-warning-bg: #fffbeb;
+  --vc-color-warning-border: #fde68a;
+  --vc-color-danger: #b91c1c;
+  --vc-color-danger-bg: #fef2f2;
+  --vc-color-danger-border: #fecaca;
+  --vc-color-info: #1d4ed8;
+  --vc-color-info-bg: #eff6ff;
+  --vc-color-info-border: #bfdbfe;
+
+  /* Spacing, shape and elevation */
+  --vc-space-xxs: 0.25rem;
+  --vc-space-xs: 0.5rem;
+  --vc-space-sm: 0.75rem;
+  --vc-space-md: 1rem;
+  --vc-space-lg: 1.5rem;
+  --vc-space-xl: 2rem;
+  --vc-space-2xl: 3rem;
+  --vc-gutter: 1.5rem;
+  --vc-container-max: 90rem;
+  --vc-sidebar-width: 16.25rem;
+  --vc-sidebar-collapsed-width: 4.5rem;
+  --vc-topbar-height: 4rem;
+  --vc-radius-control: 0.5rem;
+  --vc-radius-panel: 0.75rem;
+  --vc-radius-large: 1rem;
+  --vc-radius-pill: 9999px;
+  --vc-shadow-1:
+    0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+  --vc-shadow-2:
+    0 8px 16px -4px rgba(15, 23, 42, 0.08),
+    0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  --vc-shadow-3:
+    0 20px 25px -5px rgba(15, 23, 42, 0.1),
+    0 8px 10px -6px rgba(15, 23, 42, 0.06);
+  --vc-focus-ring: 0 0 0 0.25rem rgba(16, 185, 129, 0.18);
+  --vc-transition: 160ms ease;
+
+  /* Bootstrap bridge */
+  --bs-body-font-family: var(--vc-font-sans);
+  --bs-body-font-size: var(--vc-font-size-body);
+  --bs-body-line-height: var(--vc-line-height-body);
+  --bs-body-color: var(--vc-color-text);
+  --bs-body-bg: var(--vc-color-canvas);
+  --bs-primary: var(--vc-color-primary);
+  --bs-primary-rgb: 5, 150, 105;
+  --bs-secondary: var(--vc-color-secondary);
+  --bs-secondary-rgb: 8, 145, 178;
+  --bs-success: var(--vc-color-success);
+  --bs-success-rgb: 5, 150, 105;
+  --bs-warning: #f59e0b;
+  --bs-warning-rgb: 245, 158, 11;
+  --bs-danger: #ef4444;
+  --bs-danger-rgb: 239, 68, 68;
+  --bs-info: #3b82f6;
+  --bs-info-rgb: 59, 130, 246;
+  --bs-border-color: var(--vc-color-border);
+  --bs-border-radius: var(--vc-radius-control);
+  --bs-border-radius-sm: 0.25rem;
+  --bs-border-radius-lg: var(--vc-radius-panel);
+  --bs-box-shadow-sm: var(--vc-shadow-1);
+  --bs-box-shadow: var(--vc-shadow-2);
+  --bs-focus-ring-color: rgba(16, 185, 129, 0.25);
+  --bs-link-color: #047857;
+  --bs-link-hover-color: #065f46;
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --vc-gutter: 1rem;
+    --vc-text-headline-lg: 1.5rem;
+  }
+}

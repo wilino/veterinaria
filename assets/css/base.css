@@ -1,0 +1,144 @@
+/* Global foundation and type utilities. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--vc-color-text);
+  background: var(--vc-color-canvas);
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+a {
+  text-underline-offset: 0.18em;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 0;
+  box-shadow: var(--vc-focus-ring);
+}
+
+.vc-skip-link {
+  position: fixed;
+  z-index: 1100;
+  top: var(--vc-space-xs);
+  left: var(--vc-space-xs);
+  padding: var(--vc-space-xs) var(--vc-space-sm);
+  color: #fff;
+  background: var(--vc-color-navy);
+  border-radius: var(--vc-radius-control);
+  transform: translateY(-180%);
+  transition: transform var(--vc-transition);
+}
+
+.vc-skip-link:focus {
+  transform: translateY(0);
+}
+
+.vc-display,
+.vc-h1 {
+  font-size: var(--vc-text-display);
+  font-weight: var(--vc-font-weight-bold);
+  line-height: 1.222;
+  letter-spacing: -0.02em;
+}
+
+.vc-h2 {
+  font-size: var(--vc-text-headline-lg);
+  font-weight: var(--vc-font-weight-bold);
+  line-height: 1.286;
+  letter-spacing: -0.02em;
+}
+
+.vc-h3 {
+  font-size: var(--vc-text-headline-md);
+  font-weight: var(--vc-font-weight-semibold);
+  line-height: 1.273;
+  letter-spacing: -0.01em;
+}
+
+.vc-h4 {
+  font-size: var(--vc-text-headline-sm);
+  font-weight: var(--vc-font-weight-semibold);
+  line-height: 1.333;
+}
+
+.vc-title {
+  font-size: var(--vc-text-title);
+  font-weight: var(--vc-font-weight-semibold);
+  line-height: 1.375;
+}
+
+.vc-body-sm {
+  font-size: var(--vc-text-body-sm);
+  line-height: 1.385;
+}
+
+.vc-label,
+.vc-label-sm {
+  display: inline-block;
+  color: var(--vc-color-text-muted);
+  font-size: var(--vc-text-label-md);
+  font-weight: var(--vc-font-weight-semibold);
+  line-height: 1.333;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.vc-label-sm {
+  font-size: var(--vc-text-label-sm);
+  line-height: 1.273;
+  letter-spacing: 0.03em;
+}
+
+.vc-text-muted {
+  color: var(--vc-color-text-muted);
+}
+
+.vc-surface {
+  background-color: var(--vc-color-surface);
+}
+
+.vc-surface-low {
+  background-color: var(--vc-color-surface-low);
+}
+
+.vc-numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

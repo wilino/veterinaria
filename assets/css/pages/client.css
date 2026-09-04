@@ -1,0 +1,54 @@
+/* Client portal specifics. */
+
+.vc-page-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--vc-space-md);
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--vc-space-lg);
+}
+
+.vc-page-header h1 {
+  margin-bottom: var(--vc-space-xs);
+  font-size: var(--vc-text-headline-lg);
+  font-weight: var(--vc-font-weight-bold);
+  line-height: 1.286;
+  letter-spacing: -0.02em;
+}
+
+.vc-page-header > div > p:last-child {
+  margin-bottom: 0;
+  color: var(--vc-color-text-muted);
+}
+
+.vc-appointment-detail {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--vc-space-md);
+}
+
+.vc-appointment-detail span,
+.vc-appointment-detail strong {
+  display: block;
+}
+
+.vc-appointment-detail span {
+  margin-bottom: var(--vc-space-xxs);
+  color: var(--vc-color-text-muted);
+  font-size: var(--vc-text-body-sm);
+}
+
+@media (max-width: 767.98px) {
+  .vc-page-header {
+    align-items: stretch;
+  }
+
+  .vc-page-header > .btn {
+    width: 100%;
+  }
+
+  .vc-appointment-detail {
+    grid-template-columns: 1fr;
+  }
+}

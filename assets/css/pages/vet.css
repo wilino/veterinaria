@@ -1,0 +1,18 @@
+/* Veterinarian portal: preserves data density without sacrificing small screens. */
+
+.vc-data-table td:first-child {
+  color: var(--vc-color-text-subtle);
+  font-weight: var(--vc-font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.vc-data-table th:last-child,
+.vc-data-table td:last-child {
+  text-align: right;
+}
+
+@media (max-width: 767.98px) {
+  .vc-data-table {
+    min-width: 43rem;
+  }
+}

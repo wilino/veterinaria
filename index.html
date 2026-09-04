@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="VetCare Pro — sistema clínico veterinario."
+    />
+    <title>VetCare Pro | Sistema clínico veterinario</title>
+    <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/tokens.css" rel="stylesheet" />
+    <link href="assets/css/base.css" rel="stylesheet" />
+    <link href="assets/css/layout.css" rel="stylesheet" />
+    <link href="assets/css/components.css" rel="stylesheet" />
+    <link href="assets/css/pages/landing.css" rel="stylesheet" />
+  </head>
+  <body data-page="landing" data-partial-base=".">
+    <a class="vc-skip-link" href="#main-content"
+      >Saltar al contenido principal</a
+    >
+    <div data-partial="header-public"></div>
+
+    <main id="main-content">
+      <section class="vc-hero py-5 py-lg-6">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <p class="vc-kicker">Atención clínica veterinaria</p>
+              <h1 class="display-4 fw-bold text-balance mb-4">
+                Cuidamos su salud en cada etapa de la vida.
+              </h1>
+              <p class="lead text-secondary-emphasis mb-4">
+                Una base confiable para coordinar citas, pacientes y atención
+                clínica con el equipo VetCare Pro.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-3">
+                <a class="btn btn-primary btn-lg" href="client/dashboard.html"
+                  >Reservar una cita
+                  <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i
+                ></a>
+                <a class="btn btn-outline-primary btn-lg" href="#base"
+                  >Conocer la plataforma</a
+                >
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <aside
+                class="vc-clinical-preview"
+                aria-label="Resumen de atención veterinaria"
+              >
+                <div
+                  class="d-flex justify-content-between align-items-center mb-4"
+                >
+                  <span class="vc-brand-mark"
+                    ><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i
+                  ></span>
+                  <span class="vc-status-badge vc-status-badge--success"
+                    >Atención activa</span
+                  >
+                </div>
+                <h2 class="h4 mb-1">Próxima consulta</h2>
+                <p class="text-body-secondary mb-4">Milo · Control general</p>
+                <div class="vc-appointment-preview">
+                  <i
+                    class="bi bi-calendar-check text-primary"
+                    aria-hidden="true"
+                  ></i>
+                  <div>
+                    <strong>Hoy, 15:30</strong><span>Dr. Alejandro Ramos</span>
+                  </div>
+                </div>
+                <div class="vc-appointment-preview">
+                  <i
+                    class="bi bi-shield-check text-info"
+                    aria-hidden="true"
+                  ></i>
+                  <div>
+                    <strong>Vacunación al día</strong
+                    ><span>Próximo recordatorio en 30 días</span>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="base" class="py-5">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <article class="vc-feature">
+                <i class="bi bi-calendar2-check" aria-hidden="true"></i>
+                <h2 class="h5">Citas organizadas</h2>
+                <p>Reserva, agenda y estados claros para cada atención.</p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="vc-feature">
+                <i class="bi bi-file-medical" aria-hidden="true"></i>
+                <h2 class="h5">Historia clínica</h2>
+                <p>
+                  Información preparada para un seguimiento seguro y continuo.
+                </p>
+              </article>
+            </div>
+            <div class="col-md-4">
+              <article class="vc-feature">
+                <i class="bi bi-people" aria-hidden="true"></i>
+                <h2 class="h5">Portales por rol</h2>
+                <p>
+                  Vistas claras para tutores, personal veterinario y
+                  administración.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-partial="footer"></div>
+    <div data-partial="modals"></div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/config.js" defer></script>
+    <script src="assets/js/api.js" defer></script>
+    <script src="assets/js/state.js" defer></script>
+    <script src="assets/js/ui/layout.js" defer></script>
+    <script src="assets/js/ui/modal.js" defer></script>
+    <script src="assets/js/ui/toast.js" defer></script>
+    <script src="assets/js/ui/tabs.js" defer></script>
+    <script src="assets/js/ui/filters.js" defer></script>
+    <script src="assets/js/ui/form-validation.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

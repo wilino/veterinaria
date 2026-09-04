@@ -1,0 +1,94 @@
+<aside
+  class="vc-sidebar vc-sidebar--desktop"
+  aria-label="Navegación principal del portal"
+>
+  <div class="vc-sidebar__brand">
+    <a class="vc-logo vc-logo--inverse" href="../index.html"
+      ><span class="vc-logo__icon"
+        ><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span
+      ><span class="vc-sidebar__label">VetCare Pro</span></a
+    >
+  </div>
+  <nav class="vc-sidebar__nav">
+    <span class="vc-sidebar__section vc-sidebar__label">Cliente</span>
+    <a
+      class="vc-sidebar__link"
+      data-nav-page="client-dashboard"
+      href="../client/dashboard.html"
+      ><i class="bi bi-grid" aria-hidden="true"></i
+      ><span class="vc-sidebar__label">Mi dashboard</span></a
+    >
+    <a class="vc-sidebar__link" data-nav-page="client-pets" href="#"
+      ><i class="bi bi-heart" aria-hidden="true"></i
+      ><span class="vc-sidebar__label">Mis mascotas</span></a
+    >
+    <a class="vc-sidebar__link" data-nav-page="client-booking" href="#"
+      ><i class="bi bi-calendar-plus" aria-hidden="true"></i
+      ><span class="vc-sidebar__label">Reservar cita</span></a
+    >
+    <span class="vc-sidebar__section vc-sidebar__label">Veterinario</span>
+    <a
+      class="vc-sidebar__link"
+      data-nav-page="vet-dashboard"
+      href="../vet/dashboard.html"
+      ><i class="bi bi-clipboard2-pulse" aria-hidden="true"></i
+      ><span class="vc-sidebar__label">Agenda médica</span></a
+    >
+    <a class="vc-sidebar__link" data-nav-page="vet-records" href="#"
+      ><i class="bi bi-file-medical" aria-hidden="true"></i
+      ><span class="vc-sidebar__label">Historias clínicas</span></a
+    >
+    <span class="vc-sidebar__section vc-sidebar__label">Administración</span>
+    <a
+      class="vc-sidebar__link"
+      data-nav-page="admin-dashboard"
+      href="../admin/dashboard.html"
+      ><i class="bi bi-bar-chart-line" aria-hidden="true"></i
+      ><span class="vc-sidebar__label">Indicadores</span></a
+    >
+    <a class="vc-sidebar__link" data-nav-page="admin-users" href="#"
+      ><i class="bi bi-people" aria-hidden="true"></i
+      ><span class="vc-sidebar__label">Usuarios y roles</span></a
+    >
+  </nav>
+</aside>
+
+<aside
+  class="offcanvas offcanvas-start vc-offcanvas"
+  tabindex="-1"
+  id="vc-mobile-navigation"
+  aria-labelledby="vc-mobile-navigation-title"
+>
+  <div class="offcanvas-header">
+    <h2 class="offcanvas-title h5" id="vc-mobile-navigation-title">
+      VetCare Pro
+    </h2>
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Cerrar menú"
+    ></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <nav class="vc-sidebar__nav" aria-label="Navegación móvil">
+      <a
+        class="vc-sidebar__link"
+        data-nav-page="client-dashboard"
+        href="../client/dashboard.html"
+        ><i class="bi bi-grid" aria-hidden="true"></i>Mi dashboard</a
+      ><a
+        class="vc-sidebar__link"
+        data-nav-page="vet-dashboard"
+        href="../vet/dashboard.html"
+        ><i class="bi bi-clipboard2-pulse" aria-hidden="true"></i>Agenda
+        médica</a
+      ><a
+        class="vc-sidebar__link"
+        data-nav-page="admin-dashboard"
+        href="../admin/dashboard.html"
+        ><i class="bi bi-bar-chart-line" aria-hidden="true"></i>Indicadores</a
+      >
+    </nav>
+  </div>
+</aside>

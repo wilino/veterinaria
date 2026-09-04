@@ -1,0 +1,77 @@
+{
+  "dashboard": {
+    "nextAppointment": {
+      "id": "apt-1001",
+      "petName": "Luna",
+      "service": "Consulta general",
+      "scheduledAt": "2026-09-10T10:30:00-04:00",
+      "status": "confirmada"
+    }
+  },
+  "pets": [
+    {
+      "id": "pet-001",
+      "name": "Luna",
+      "species": "Canino",
+      "breed": "Labrador",
+      "age": "4 años",
+      "vaccinationStatus": "al_día"
+    },
+    {
+      "id": "pet-002",
+      "name": "Milo",
+      "species": "Felino",
+      "breed": "Mestizo",
+      "age": "2 años",
+      "vaccinationStatus": "próxima"
+    }
+  ],
+  "appointments": [
+    {
+      "id": "apt-1001",
+      "petId": "pet-001",
+      "petName": "Luna",
+      "ownerName": "María Pérez",
+      "service": "Consulta general",
+      "professional": "Dra. Ana Rojas",
+      "scheduledAt": "2026-09-10T10:30:00-04:00",
+      "status": "confirmada"
+    },
+    {
+      "id": "apt-1002",
+      "petId": "pet-002",
+      "petName": "Milo",
+      "ownerName": "María Pérez",
+      "service": "Vacunación",
+      "professional": "Dr. Diego Flores",
+      "scheduledAt": "2026-09-12T15:00:00-04:00",
+      "status": "en_espera"
+    }
+  ],
+  "services": [
+    {
+      "id": "srv-001",
+      "name": "Consulta general",
+      "durationMinutes": 30,
+      "price": 120
+    },
+    {
+      "id": "srv-002",
+      "name": "Vacunación",
+      "durationMinutes": 20,
+      "price": 95
+    }
+  ],
+  "professionals": [
+    {
+      "id": "vet-001",
+      "name": "Dra. Ana Rojas",
+      "specialty": "Medicina interna"
+    },
+    {
+      "id": "vet-002",
+      "name": "Dr. Diego Flores",
+      "specialty": "Medicina preventiva"
+    }
+  ]
+}
