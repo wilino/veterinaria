@@ -5,11 +5,11 @@
   "type": "module",
   "description": "Base frontend de VetCare Pro con HTML, Bootstrap y jQuery.",
   "scripts": {
-    "format": "prettier --write \"{index.html,README.md,assets/**/*.{css,js,json},client/**/*.html,vet/**/*.html,admin/**/*.html,partials/**/*.html}\"",
-    "format:check": "prettier --check \"{index.html,README.md,assets/**/*.{css,js,json},client/**/*.html,vet/**/*.html,admin/**/*.html,partials/**/*.html}\"",
+    "format": "prettier --write \"{index.html,README.md,assets/**/*.{css,js,json},client/**/*.html,vet/**/*.html,admin/**/*.html,public/**/*.html,partials/**/*.html}\"",
+    "format:check": "prettier --check \"{index.html,README.md,assets/**/*.{css,js,json},client/**/*.html,vet/**/*.html,admin/**/*.html,public/**/*.html,partials/**/*.html}\"",
     "lint:js": "eslint assets/js",
     "lint:css": "stylelint \"assets/css/**/*.css\"",
-    "lint:html": "html-validate index.html client/**/*.html vet/**/*.html admin/**/*.html",
+    "lint:html": "html-validate index.html client/**/*.html vet/**/*.html admin/**/*.html public/**/*.html",
     "check": "npm run format:check && npm run lint:js && npm run lint:css && npm run lint:html"
   },
   "devDependencies": {

@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#059669" />
+    <title>Solicitar una cita | VetCare Pro</title>
+    <link
+      rel="icon"
+      href="../assets/img/brand/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/tokens.css" rel="stylesheet" />
+    <link href="../assets/css/base.css" rel="stylesheet" />
+    <link href="../assets/css/layout.css" rel="stylesheet" />
+    <link href="../assets/css/components.css" rel="stylesheet" />
+    <link href="../assets/css/pages/booking.css" rel="stylesheet" />
+  </head>
+  <body class="vc-page" data-page="booking">
+    <a class="vc-skip-link" href="#main-content">Saltar al formulario</a>
+    <header class="vc-public-header">
+      <nav
+        class="container d-flex align-items-center justify-content-between gap-3 py-3"
+        aria-label="Navegación principal"
+      >
+        <a
+          class="vc-logo"
+          href="../index.html"
+          aria-label="VetCare Pro, inicio"
+        >
+          <span class="vc-logo__icon"
+            ><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i
+          ></span>
+          <span>VetCare Pro</span>
+        </a>
+        <a class="btn btn-outline-secondary" href="../client/dashboard.html"
+          >Ingresar al portal</a
+        >
+      </nav>
+    </header>
+
+    <main id="main-content" class="vc-public-main">
+      <section class="vc-booking-hero">
+        <div class="container">
+          <div class="vc-booking-hero__content">
+            <p class="vc-kicker">Atención veterinaria</p>
+            <h1>Solicita una cita para tu mascota</h1>
+            <p>
+              Completa estos datos y nuestro equipo confirmará la disponibilidad
+              contigo por el medio de contacto que prefieras.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="vc-section vc-booking-section">
+        <div class="container">
+          <div class="row g-4 g-xl-5 align-items-start">
+            <div class="col-lg-7">
+              <form
+                id="booking-form"
+                class="needs-validation vc-booking-form"
+                novalidate
+              >
+                <div
+                  id="booking-error"
+                  class="alert alert-danger d-none"
+                  role="alert"
+                  tabindex="-1"
+                >
+                  <i
+                    class="bi bi-exclamation-triangle-fill me-2"
+                    aria-hidden="true"
+                  ></i>
+                  <span data-booking-error-message
+                    >No pudimos enviar tu solicitud. Inténtalo nuevamente.</span
+                  >
+                </div>
+
+                <fieldset class="vc-booking-card">
+                  <legend>
+                    <span class="vc-booking-step">1</span>Datos del tutor
+                  </legend>
+                  <p class="vc-booking-card__intro">
+                    Necesitamos una persona de contacto para confirmar la cita.
+                  </p>
+                  <div class="row g-3">
+                    <div class="col-md-7">
+                      <label class="form-label" for="owner-name"
+                        >Nombre completo
+                        <span aria-hidden="true">*</span></label
+                      >
+                      <input
+                        id="owner-name"
+                        class="form-control"
+                        name="ownerName"
+                        type="text"
+                        autocomplete="name"
+                        required
+                        minlength="3"
+                      />
+                      <div class="invalid-feedback">
+                        Ingresa el nombre completo del tutor.
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <label class="form-label" for="owner-document"
+                        >Carnet de identidad</label
+                      >
+                      <input
+                        id="owner-document"
+                        class="form-control"
+                        name="ownerDocument"
+                        type="text"
+                        autocomplete="off"
+                        inputmode="numeric"
+                      />
+                      <div class="form-text">Opcional.</div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="owner-phone"
+                        >Teléfono o WhatsApp
+                        <span aria-hidden="true">*</span></label
+                      >
+                      <input
+                        id="owner-phone"
+                        class="form-control"
+                        name="ownerPhone"
+                        type="tel"
+                        autocomplete="tel"
+                        inputmode="tel"
+                        required
+                        minlength="7"
+                        maxlength="20"
+                      />
+                      <div class="invalid-feedback">
+                        Ingresa un teléfono válido.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="owner-email"
+                        >Correo electrónico
+                        <span aria-hidden="true">*</span></label
+                      >
+                      <input
+                        id="owner-email"
+                        class="form-control"
+                        name="ownerEmail"
+                        type="email"
+                        autocomplete="email"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Ingresa un correo electrónico válido.
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="vc-booking-card">
+                  <legend>
+                    <span class="vc-booking-step">2</span>Datos de la mascota
+                  </legend>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label class="form-label" for="pet-name"
+                        >Nombre de la mascota
+                        <span aria-hidden="true">*</span></label
+                      >
+                      <input
+                        id="pet-name"
+                        class="form-control"
+                        name="petName"
+                        type="text"
+                        required
+                        minlength="2"
+                      />
+                      <div class="invalid-feedback">
+                        Ingresa el nombre de la mascota.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="pet-species"
+                        >Especie <span aria-hidden="true">*</span></label
+                      >
+                      <select
+                        id="pet-species"
+                        class="form-select"
+                        name="petSpecies"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Selecciona una especie
+                        </option>
+                        <option value="canino">Canino</option>
+                        <option value="felino">Felino</option>
+                        <option value="ave">Ave</option>
+                        <option value="otro">Otra</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Selecciona la especie de tu mascota.
+                      </div>
+                    </div>
+                    <div class="col-md-7">
+                      <label class="form-label" for="pet-breed">Raza</label>
+                      <input
+                        id="pet-breed"
+                        class="form-control"
+                        name="petBreed"
+                        type="text"
+                      />
+                      <div class="form-text">
+                        Si no la conoces, puedes indicar “mestizo/a”.
+                      </div>
+                    </div>
+                    <div class="col-md-5">
+                      <label class="form-label" for="pet-age"
+                        >Edad aproximada</label
+                      >
+                      <input
+                        id="pet-age"
+                        class="form-control"
+                        name="petAge"
+                        type="text"
+                        placeholder="Ej.: 3 años"
+                      />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="vc-booking-card">
+                  <legend>
+                    <span class="vc-booking-step">3</span>Preferencia de
+                    atención
+                  </legend>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label class="form-label" for="service"
+                        >Servicio <span aria-hidden="true">*</span></label
+                      >
+                      <select
+                        id="service"
+                        class="form-select"
+                        name="serviceId"
+                        required
+                        aria-describedby="service-help"
+                      >
+                        <option value="" selected disabled>
+                          Selecciona el motivo de la cita
+                        </option>
+                        <option value="srv-001">Consulta general</option>
+                        <option value="srv-002">Vacunación</option>
+                        <option value="consulta-especializada">
+                          Consulta especializada
+                        </option>
+                        <option value="control">Control o seguimiento</option>
+                      </select>
+                      <div id="service-help" class="form-text">
+                        El equipo veterinario te orientará si se requiere otro
+                        servicio.
+                      </div>
+                      <div class="invalid-feedback">
+                        Selecciona el servicio que necesitas.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="preferred-date"
+                        >Fecha preferida
+                        <span aria-hidden="true">*</span></label
+                      >
+                      <input
+                        id="preferred-date"
+                        class="form-control"
+                        name="preferredDate"
+                        type="date"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Selecciona una fecha futura para la atención.
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label class="form-label" for="preferred-time"
+                        >Horario preferido
+                        <span aria-hidden="true">*</span></label
+                      >
+                      <select
+                        id="preferred-time"
+                        class="form-select"
+                        name="preferredTime"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Selecciona un horario
+                        </option>
+                        <option value="manana">Mañana · 08:00 a 12:00</option>
+                        <option value="tarde">Tarde · 14:00 a 18:00</option>
+                        <option value="indistinto">Indistinto</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Selecciona un horario de preferencia.
+                      </div>
+                    </div>
+                    <div class="col-12">
+                      <label class="form-label" for="observations"
+                        >Motivo u observaciones</label
+                      >
+                      <textarea
+                        id="observations"
+                        class="form-control"
+                        name="observations"
+                        rows="4"
+                        maxlength="500"
+                        aria-describedby="observations-help"
+                        placeholder="Cuéntanos brevemente qué necesita tu mascota."
+                      ></textarea>
+                      <div id="observations-help" class="form-text">
+                        <span id="observations-count">0</span>/500 caracteres.
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+                <fieldset class="vc-booking-card vc-booking-card--compact">
+                  <legend class="visually-hidden">
+                    Confirmación de contacto
+                  </legend>
+                  <div class="form-check">
+                    <input
+                      id="contact-consent"
+                      class="form-check-input"
+                      name="contactConsent"
+                      type="checkbox"
+                      required
+                    />
+                    <label class="form-check-label" for="contact-consent"
+                      >Autorizo a VetCare Pro a contactarme para confirmar esta
+                      solicitud. <span aria-hidden="true">*</span></label
+                    >
+                    <div class="invalid-feedback">
+                      Necesitamos tu autorización para confirmar la cita.
+                    </div>
+                  </div>
+                </fieldset>
+
+                <div class="vc-booking-actions">
+                  <p class="vc-booking-actions__note">
+                    <span aria-hidden="true">*</span> Campos obligatorios
+                  </p>
+                  <button
+                    id="booking-submit"
+                    class="btn btn-primary"
+                    type="submit"
+                  >
+                    <span class="booking-submit-label"
+                      ><i class="bi bi-send me-2" aria-hidden="true"></i>Enviar
+                      solicitud</span
+                    >
+                    <span class="booking-submit-loading d-none"
+                      ><span
+                        class="spinner-border spinner-border-sm me-2"
+                        aria-hidden="true"
+                      ></span
+                      >Enviando…</span
+                    >
+                  </button>
+                </div>
+              </form>
+
+              <section
+                id="booking-success"
+                class="vc-booking-success d-none"
+                aria-labelledby="booking-success-title"
+                tabindex="-1"
+              >
+                <div class="vc-booking-success__icon">
+                  <i class="bi bi-check-lg" aria-hidden="true"></i>
+                </div>
+                <p class="vc-kicker">Solicitud recibida</p>
+                <h2 id="booking-success-title">
+                  ¡Gracias! Ya recibimos tu solicitud.
+                </h2>
+                <p>
+                  Te contactaremos para confirmar la disponibilidad. Guarda este
+                  código de referencia:
+                  <strong id="booking-reference" class="vc-numeric"></strong>.
+                </p>
+                <dl class="vc-booking-confirmation">
+                  <div>
+                    <dt>Mascota</dt>
+                    <dd data-confirmation="pet"></dd>
+                  </div>
+                  <div>
+                    <dt>Servicio</dt>
+                    <dd data-confirmation="service"></dd>
+                  </div>
+                  <div>
+                    <dt>Preferencia</dt>
+                    <dd data-confirmation="schedule"></dd>
+                  </div>
+                </dl>
+                <div class="d-flex flex-wrap gap-2">
+                  <button
+                    class="btn btn-primary"
+                    type="button"
+                    data-action="new-booking"
+                  >
+                    Solicitar otra cita
+                  </button>
+                  <a class="btn btn-outline-secondary" href="../index.html"
+                    >Volver al inicio</a
+                  >
+                </div>
+              </section>
+            </div>
+
+            <aside class="col-lg-5" aria-label="Resumen de la solicitud">
+              <div class="vc-booking-summary">
+                <div class="vc-booking-summary__header">
+                  <span class="vc-booking-summary__icon"
+                    ><i class="bi bi-calendar-heart" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <h2 class="h5 mb-1">Resumen de tu solicitud</h2>
+                    <p class="mb-0">
+                      Revisa tus preferencias antes de enviarlas.
+                    </p>
+                  </div>
+                </div>
+                <dl class="vc-booking-summary__list" aria-live="polite">
+                  <div>
+                    <dt>Paciente</dt>
+                    <dd data-summary="pet">Aún no indicado</dd>
+                  </div>
+                  <div>
+                    <dt>Servicio</dt>
+                    <dd data-summary="service">Aún no seleccionado</dd>
+                  </div>
+                  <div>
+                    <dt>Fecha</dt>
+                    <dd data-summary="date">Aún no seleccionada</dd>
+                  </div>
+                  <div>
+                    <dt>Horario</dt>
+                    <dd data-summary="time">Aún no seleccionado</dd>
+                  </div>
+                  <div>
+                    <dt>Contacto</dt>
+                    <dd data-summary="contact">Aún no indicado</dd>
+                  </div>
+                </dl>
+                <div class="vc-booking-summary__notice">
+                  <i class="bi bi-info-circle" aria-hidden="true"></i>
+                  <p>
+                    Esta es una solicitud. La cita se confirma cuando nuestro
+                    equipo se comunique contigo.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="vc-footer py-4">
+      <div
+        class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2"
+      >
+        <div class="vc-logo vc-logo--inverse">
+          <span class="vc-logo__icon"
+            ><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i></span
+          ><span>VetCare Pro</span>
+        </div>
+        <small>Tu mascota, nuestra prioridad.</small>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../assets/js/config.js" defer></script>
+    <script src="../assets/js/api.js" defer></script>
+    <script src="../assets/js/state.js" defer></script>
+    <script src="../assets/js/ui/toast.js" defer></script>
+    <script src="../assets/js/ui/form-validation.js" defer></script>
+    <script src="../assets/js/app.js" defer></script>
+    <script src="../assets/js/pages/booking.js" defer></script>
+  </body>
+</html>

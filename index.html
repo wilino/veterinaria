@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="VetCare Pro — sistema clínico veterinario."
+      content="VetCare Pro: clínica veterinaria, especialidades, urgencias y reserva de citas."
     />
-    <title>VetCare Pro | Sistema clínico veterinario</title>
+    <title>VetCare Pro | Clínica veterinaria</title>
     <link rel="icon" href="assets/img/brand/favicon.svg" type="image/svg+xml" />
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
@@ -35,99 +35,588 @@
     >
     <div data-partial="header-public"></div>
 
-    <main id="main-content">
-      <section class="vc-hero py-5 py-lg-6">
-        <div class="container">
+    <main id="main-content" class="vc-public-main">
+      <section
+        class="vc-emergency-bar"
+        id="urgencias"
+        aria-label="Información de urgencias"
+      >
+        <div
+          class="container d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-2 py-2"
+        >
+          <p class="mb-0">
+            <i
+              class="bi bi-exclamation-circle-fill text-danger me-2"
+              aria-hidden="true"
+            ></i
+            ><strong>Emergencias veterinarias 24/7:</strong>
+            <a href="tel:+59122784500">+591&nbsp;2&nbsp;278&#8209;4500</a
+            ><span class="d-none d-lg-inline vc-emergency-divider">|</span
+            ><span class="d-none d-lg-inline"
+              ><i class="bi bi-geo-alt me-1" aria-hidden="true"></i>Av.
+              Ballivián, Calle 15, Calacoto, La Paz</span
+            >
+          </p>
+          <span class="vc-triage-badge"
+            ><span aria-hidden="true"></span>Triaje abierto inmediato</span
+          >
+        </div>
+      </section>
+
+      <section id="inicio" class="vc-hero vc-section">
+        <div class="container position-relative">
           <div class="row align-items-center g-5">
             <div class="col-lg-7">
-              <p class="vc-kicker">Atención clínica veterinaria</p>
-              <h1 class="display-4 fw-bold text-balance mb-4">
-                Cuidamos su salud en cada etapa de la vida.
-              </h1>
-              <p class="lead text-secondary-emphasis mb-4">
-                Una base confiable para coordinar citas, pacientes y atención
-                clínica con el equipo VetCare Pro.
+              <p class="vc-kicker vc-kicker--pill">
+                <i class="bi bi-patch-check-fill" aria-hidden="true"></i>Centro
+                clínico y quirúrgico acreditado
               </p>
-              <div class="d-flex flex-column flex-sm-row gap-3">
-                <a class="btn btn-primary btn-lg" href="client/dashboard.html"
-                  >Reservar una cita
-                  <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i
-                ></a>
-                <a class="btn btn-outline-primary btn-lg" href="#base"
-                  >Conocer la plataforma</a
+              <h1 class="vc-display mb-4">
+                El mejor cuidado para quienes forman parte de tu
+                <span>familia</span>.
+              </h1>
+              <p class="vc-hero__intro">
+                Atención médica de alta precisión combinada con empatía genuina.
+                Tecnología clínica, diagnóstico in situ y un equipo
+                especializado para proteger cada latido.
+              </p>
+              <div class="d-flex flex-column flex-sm-row gap-3 mt-4">
+                <a
+                  class="btn btn-primary btn-lg"
+                  href="public/solicitar-cita.html"
+                  ><i class="bi bi-calendar2-week me-2" aria-hidden="true"></i
+                  >Reservar una cita</a
                 >
+                <a class="btn vc-btn-light btn-lg" href="#servicios"
+                  ><i class="bi bi-heart-pulse me-2" aria-hidden="true"></i
+                  >Conocer servicios</a
+                >
+              </div>
+              <div class="row g-3 mt-4">
+                <div class="col-sm-4">
+                  <div class="vc-stat-card">
+                    <span class="vc-stat-card__icon"
+                      ><i class="bi bi-heart-fill" aria-hidden="true"></i></span
+                    ><span
+                      ><strong>+15.000</strong
+                      ><small>Mascotas atendidas</small></span
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="vc-stat-card">
+                    <span class="vc-stat-card__icon vc-stat-card__icon--cyan"
+                      ><i class="bi bi-activity" aria-hidden="true"></i></span
+                    ><span
+                      ><strong>24/7</strong
+                      ><small>Guardia médica activa</small></span
+                    >
+                  </div>
+                </div>
+                <div class="col-sm-4">
+                  <div class="vc-stat-card">
+                    <span class="vc-stat-card__icon"
+                      ><i class="bi bi-award-fill" aria-hidden="true"></i></span
+                    ><span
+                      ><strong>100%</strong
+                      ><small>Especialistas certificados</small></span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col-lg-5">
-              <aside
-                class="vc-clinical-preview"
-                aria-label="Resumen de atención veterinaria"
-              >
+              <div class="vc-hero-showcase">
                 <div
-                  class="d-flex justify-content-between align-items-center mb-4"
+                  class="vc-hero-showcase__media"
+                  role="img"
+                  aria-label="Atención de una veterinaria a un paciente en una clínica moderna"
+                ></div>
+                <div
+                  class="vc-hero-showcase__body d-flex align-items-center justify-content-between gap-3"
                 >
-                  <span class="vc-brand-mark"
-                    ><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i
-                  ></span>
-                  <span class="vc-status-badge vc-status-badge--success"
-                    >Atención activa</span
+                  <div class="d-flex align-items-center gap-3">
+                    <span class="vc-showcase-icon"
+                      ><i class="bi bi-heart-pulse" aria-hidden="true"></i
+                    ></span>
+                    <div>
+                      <h2 class="vc-title mb-1">Unidad intensiva y triaje</h2>
+                      <p class="mb-0">Atención clínica disponible 24/7</p>
+                    </div>
+                  </div>
+                  <span class="vc-ready-status"
+                    ><span aria-hidden="true"></span>Guardia lista</span
                   >
                 </div>
-                <h2 class="h4 mb-1">Próxima consulta</h2>
-                <p class="text-body-secondary mb-4">Milo · Control general</p>
-                <div class="vc-appointment-preview">
-                  <i
-                    class="bi bi-calendar-check text-primary"
-                    aria-hidden="true"
-                  ></i>
-                  <div>
-                    <strong>Hoy, 15:30</strong><span>Dr. Alejandro Ramos</span>
-                  </div>
+                <div class="vc-floating-card">
+                  <span class="vc-showcase-icon vc-showcase-icon--cyan"
+                    ><i class="bi bi-camera-fill" aria-hidden="true"></i></span
+                  ><span
+                    ><strong>Diagnóstico por imagen</strong
+                    ><small>Resultados oportunos</small></span
+                  >
                 </div>
-                <div class="vc-appointment-preview">
-                  <i
-                    class="bi bi-shield-check text-info"
-                    aria-hidden="true"
-                  ></i>
-                  <div>
-                    <strong>Vacunación al día</strong
-                    ><span>Próximo recordatorio en 30 días</span>
-                  </div>
-                </div>
-              </aside>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="base" class="py-5">
+      <section id="servicios" class="vc-section vc-section--muted">
         <div class="container">
+          <div class="vc-section-heading text-center mx-auto">
+            <p class="vc-kicker">Especialidades médicas</p>
+            <h2 class="vc-h2">Nuestros servicios veterinarios</h2>
+            <p>
+              Desde controles preventivos hasta cirugías de alta complejidad,
+              con una atención clara y humana en cada paso.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <article class="vc-service-card">
+                <div>
+                  <span class="vc-service-card__icon"
+                    ><i class="bi bi-stethoscope" aria-hidden="true"></i
+                  ></span>
+                  <h3>Consulta veterinaria</h3>
+                  <p>
+                    Evaluación clínica integral, exploración física y plan de
+                    bienestar personalizado.
+                  </p>
+                </div>
+                <div class="vc-service-card__footer">
+                  <span>Desde <strong>Bs. 120</strong></span
+                  ><a href="public/solicitar-cita.html">Solicitar turno</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="vc-service-card">
+                <div>
+                  <span
+                    class="vc-service-card__icon vc-service-card__icon--cyan"
+                    ><i class="bi bi-shield-plus" aria-hidden="true"></i
+                  ></span>
+                  <h3>Vacunación e inmunización</h3>
+                  <p>
+                    Planes de prevención y certificación oficial en la libreta
+                    digital de tu mascota.
+                  </p>
+                </div>
+                <div class="vc-service-card__footer">
+                  <span>Desde <strong>Bs. 90</strong></span
+                  ><a href="public/solicitar-cita.html">Solicitar turno</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="vc-service-card">
+                <div>
+                  <span
+                    class="vc-service-card__icon vc-service-card__icon--slate"
+                    ><i class="bi bi-capsule" aria-hidden="true"></i
+                  ></span>
+                  <h3>Desparasitación integral</h3>
+                  <p>
+                    Protocolos ajustados a peso, edad, entorno y necesidades de
+                    cada paciente.
+                  </p>
+                </div>
+                <div class="vc-service-card__footer">
+                  <span>Desde <strong>Bs. 60</strong></span
+                  ><a href="public/solicitar-cita.html">Solicitar turno</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="vc-service-card">
+                <div>
+                  <span class="vc-service-card__icon"
+                    ><i class="bi bi-heart-pulse" aria-hidden="true"></i
+                  ></span>
+                  <h3>Cirugía y quirófano</h3>
+                  <p>
+                    Cirugía de tejidos blandos, traumatología y esterilizaciones
+                    con monitorización.
+                  </p>
+                </div>
+                <div class="vc-service-card__footer">
+                  <span>Desde <strong>Bs. 450</strong></span
+                  ><a href="public/solicitar-cita.html">Consultar</a>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="vc-service-card vc-service-card--emergency">
+                <div>
+                  <div class="d-flex justify-content-between align-items-start">
+                    <span
+                      class="vc-service-card__icon vc-service-card__icon--emergency"
+                      ><i
+                        class="bi bi-exclamation-triangle"
+                        aria-hidden="true"
+                      ></i></span
+                    ><span class="vc-emergency-label">Guardia activa</span>
+                  </div>
+                  <h3>Emergencias 24 horas</h3>
+                  <p>
+                    Estabilización urgente, cuidados críticos y hospitalización
+                    para cuadros complejos.
+                  </p>
+                </div>
+                <div class="vc-service-card__footer">
+                  <span>Atención <strong>sin turno</strong></span
+                  ><a class="vc-call-action" href="tel:+59122784500"
+                    >Llamar al +591&nbsp;2&nbsp;278&#8209;4500</a
+                  >
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="vc-service-card">
+                <div>
+                  <span
+                    class="vc-service-card__icon vc-service-card__icon--cyan"
+                    ><i class="bi bi-eyedropper" aria-hidden="true"></i
+                  ></span>
+                  <h3>Laboratorio clínico</h3>
+                  <p>
+                    Estudios de rutina y análisis para acompañar un diagnóstico
+                    más oportuno.
+                  </p>
+                </div>
+                <div class="vc-service-card__footer">
+                  <span>Desde <strong>Bs. 150</strong></span
+                  ><a href="public/solicitar-cita.html">Solicitar turno</a>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="equipo" class="vc-section">
+        <div class="container">
+          <div
+            class="d-flex flex-column flex-md-row align-items-md-end justify-content-between gap-3 mb-4"
+          >
+            <div class="vc-section-heading mb-0">
+              <p class="vc-kicker">Staff profesional</p>
+              <h2 class="vc-h2">Cuerpo médico especializado</h2>
+              <p>
+                Profesionales en actualización constante para una atención
+                segura y cercana.
+              </p>
+            </div>
+            <a class="btn vc-btn-light" href="public/solicitar-cita.html"
+              ><i class="bi bi-people me-2" aria-hidden="true"></i>Ver plantilla
+              de guardia</a
+            >
+          </div>
           <div class="row g-4">
             <div class="col-md-4">
-              <article class="vc-feature">
-                <i class="bi bi-calendar2-check" aria-hidden="true"></i>
-                <h2 class="h5">Citas organizadas</h2>
-                <p>Reserva, agenda y estados claros para cada atención.</p>
+              <article class="vc-doctor-card">
+                <div class="vc-doctor-card__visual vc-doctor-card__visual--one">
+                  <i class="bi bi-person-heart" aria-hidden="true"></i
+                  ><span>12 años de experiencia</span>
+                </div>
+                <h3>
+                  Dra. Emily Chen
+                  <i class="bi bi-patch-check-fill" aria-hidden="true"></i
+                  ><span class="visually-hidden">Profesional verificada</span>
+                </h3>
+                <p class="vc-doctor-card__specialty">
+                  Cirugía general y tejidos blandos
+                </p>
+                <p class="vc-doctor-card__copy">
+                  Especialista en intervenciones de alta precisión y cuidado
+                  postoperatorio.
+                </p>
+                <a
+                  href="public/solicitar-cita.html"
+                  class="btn btn-primary w-100"
+                  >Reservar cita</a
+                >
               </article>
             </div>
             <div class="col-md-4">
-              <article class="vc-feature">
-                <i class="bi bi-file-medical" aria-hidden="true"></i>
-                <h2 class="h5">Historia clínica</h2>
-                <p>
-                  Información preparada para un seguimiento seguro y continuo.
+              <article class="vc-doctor-card">
+                <div class="vc-doctor-card__visual vc-doctor-card__visual--two">
+                  <i class="bi bi-heart-pulse-fill" aria-hidden="true"></i
+                  ><span>15 años de experiencia</span>
+                </div>
+                <h3>
+                  Dr. Carlos Mendoza
+                  <i class="bi bi-patch-check-fill" aria-hidden="true"></i
+                  ><span class="visually-hidden">Profesional verificado</span>
+                </h3>
+                <p class="vc-doctor-card__specialty">
+                  Cardiología y diagnóstico por imagen
                 </p>
+                <p class="vc-doctor-card__copy">
+                  Acompañamiento especializado para diagnósticos y controles de
+                  precisión.
+                </p>
+                <a
+                  href="public/solicitar-cita.html"
+                  class="btn btn-primary w-100"
+                  >Reservar cita</a
+                >
               </article>
             </div>
             <div class="col-md-4">
-              <article class="vc-feature">
-                <i class="bi bi-people" aria-hidden="true"></i>
-                <h2 class="h5">Portales por rol</h2>
-                <p>
-                  Vistas claras para tutores, personal veterinario y
-                  administración.
+              <article class="vc-doctor-card">
+                <div
+                  class="vc-doctor-card__visual vc-doctor-card__visual--three"
+                >
+                  <i class="bi bi-chat-heart-fill" aria-hidden="true"></i
+                  ><span>9 años de experiencia</span>
+                </div>
+                <h3>
+                  Dra. Sofía Valenzuela
+                  <i class="bi bi-patch-check-fill" aria-hidden="true"></i
+                  ><span class="visually-hidden">Profesional verificada</span>
+                </h3>
+                <p class="vc-doctor-card__specialty">
+                  Medicina felina y cuidados críticos
                 </p>
+                <p class="vc-doctor-card__copy">
+                  Atención respetuosa y protocolos diseñados para pacientes
+                  sensibles.
+                </p>
+                <a
+                  href="public/solicitar-cita.html"
+                  class="btn btn-primary w-100"
+                  >Reservar cita</a
+                >
               </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vc-trust-section vc-section">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+              <p class="vc-kicker">Estándar hospitalario</p>
+              <h2 class="vc-h2">
+                ¿Por qué confiar la salud de tu mascota a VetCare Pro?
+              </h2>
+              <p class="vc-trust-section__intro">
+                Un diagnóstico oportuno y certero hace la diferencia. Combinamos
+                procesos clínicos, infraestructura y comunicación transparente.
+              </p>
+              <div class="vstack gap-4 mt-4">
+                <div class="vc-trust-item">
+                  <span><i class="bi bi-cpu" aria-hidden="true"></i></span>
+                  <div>
+                    <h3>Equipamiento de última generación</h3>
+                    <p>
+                      Tecnología clínica para acompañar decisiones más
+                      informadas.
+                    </p>
+                  </div>
+                </div>
+                <div class="vc-trust-item">
+                  <span class="vc-trust-item__icon--cyan"
+                    ><i class="bi bi-flask" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <h3>Laboratorio propio in situ</h3>
+                    <p>
+                      Pruebas prioritarias y resultados para el equipo tratante.
+                    </p>
+                  </div>
+                </div>
+                <div class="vc-trust-item">
+                  <span
+                    ><i class="bi bi-broadcast-heart" aria-hidden="true"></i
+                  ></span>
+                  <div>
+                    <h3>Hospitalización monitoreada 24/7</h3>
+                    <p>
+                      Seguimiento continuo y comunicación responsable con las
+                      familias.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="vc-trust-grid">
+                <div class="vc-trust-image">
+                  <i class="bi bi-hospital" aria-hidden="true"></i
+                  ><span>Quirófano y hospitalización</span>
+                </div>
+                <div class="vc-trust-metric">
+                  <i class="bi bi-stopwatch" aria-hidden="true"></i
+                  ><strong>15 min</strong
+                  ><span>Tiempo promedio de respuesta en emergencias.</span>
+                </div>
+                <div class="vc-trust-metric vc-trust-metric--large">
+                  <strong>99,4%</strong
+                  ><span
+                    >Tasa de éxito quirúrgico con protocolos de
+                    bioseguridad.</span
+                  >
+                </div>
+                <div class="vc-trust-image vc-trust-image--lab">
+                  <i class="bi bi-microscope" aria-hidden="true"></i
+                  ><span>Laboratorio clínico</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="vc-section vc-section--muted">
+        <div class="container">
+          <div class="vc-section-heading text-center mx-auto">
+            <p class="vc-kicker">Historias reales</p>
+            <h2 class="vc-h2">Familias que confían en nosotros</h2>
+            <p>
+              La tranquilidad de los tutores y el bienestar de sus mascotas son
+              nuestro mayor aval.
+            </p>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <figure class="vc-testimonial">
+                <div class="vc-stars" role="img" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+                <blockquote>
+                  “Llegamos de madrugada con Milo. El equipo lo atendió con una
+                  serenidad y calidez que nunca vamos a olvidar.”
+                </blockquote>
+                <figcaption>
+                  <span class="vc-avatar">MF</span
+                  ><span
+                    ><strong>Mariana F. y Milo</strong
+                    ><small>Cirugía de urgencia</small></span
+                  >
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4">
+              <figure class="vc-testimonial">
+                <div class="vc-stars" role="img" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+                <blockquote>
+                  “Nos explicaron cada paso de la consulta y el plan de
+                  vacunación de Nala. Ahora todo es mucho más simple.”
+                </blockquote>
+                <figcaption>
+                  <span class="vc-avatar vc-avatar--cyan">AR</span
+                  ><span
+                    ><strong>Andrés R. y Nala</strong
+                    ><small>Medicina preventiva</small></span
+                  >
+                </figcaption>
+              </figure>
+            </div>
+            <div class="col-md-4">
+              <figure class="vc-testimonial">
+                <div class="vc-stars" role="img" aria-label="5 de 5 estrellas">
+                  <i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i
+                  ><i class="bi bi-star-fill" aria-hidden="true"></i>
+                </div>
+                <blockquote>
+                  “La atención felina fue increíble: respetaron el ritmo de
+                  Bruno y nos dieron seguridad desde el primer momento.”
+                </blockquote>
+                <figcaption>
+                  <span class="vc-avatar vc-avatar--slate">LC</span
+                  ><span
+                    ><strong>Lucía C. y Bruno</strong
+                    ><small>Medicina felina</small></span
+                  >
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="vc-contact-section vc-section">
+        <div class="container">
+          <div class="vc-section-heading text-center mx-auto">
+            <p class="vc-kicker">Estamos para ayudarte</p>
+            <h2 class="vc-h2">Contacto, horarios y reservas</h2>
+            <p>
+              Encuentra la atención que tu mascota necesita o agenda su próxima
+              consulta.
+            </p>
+          </div>
+          <div class="row g-4 align-items-stretch">
+            <div class="col-lg-5">
+              <div class="vc-contact-info h-100">
+                <div class="vc-map-placeholder">
+                  <i class="bi bi-geo-alt-fill" aria-hidden="true"></i
+                  ><span>VetCare Pro<br />Calacoto, La Paz</span>
+                </div>
+                <div class="row g-3 mt-1">
+                  <div class="col-sm-6">
+                    <p class="vc-contact-info__label">Horarios</p>
+                    <p class="mb-0">
+                      <strong>Lun. a sáb.</strong><br />08:00 – 20:00<br /><strong
+                        >Guardia</strong
+                      ><br />24 horas
+                    </p>
+                  </div>
+                  <div class="col-sm-6">
+                    <p class="vc-contact-info__label">Canales de atención</p>
+                    <p class="mb-1">
+                      <a href="tel:+59122784500"
+                        >+591&nbsp;2&nbsp;278&#8209;4500</a
+                      >
+                    </p>
+                    <p class="mb-0">
+                      <a href="mailto:contacto@vetcarepro.bo"
+                        >contacto@vetcarepro.bo</a
+                      >
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="vc-contact-cta h-100">
+                <span class="vc-contact-cta__icon"
+                  ><i class="bi bi-calendar2-check" aria-hidden="true"></i
+                ></span>
+                <h3>Reserva una consulta en pocos pasos</h3>
+                <p>
+                  Elige el motivo de visita, fecha y horario. Recibirás la
+                  confirmación de tu solicitud por el canal que prefieras.
+                </p>
+                <ul>
+                  <li>Agenda de consulta y especialidad</li>
+                  <li>Atención de urgencias sin turno previo</li>
+                  <li>Seguimiento desde el portal del cliente</li>
+                </ul>
+                <a
+                  class="btn btn-primary btn-lg"
+                  href="public/solicitar-cita.html"
+                  >Iniciar solicitud
+                  <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i
+                ></a>
+              </div>
             </div>
           </div>
         </div>

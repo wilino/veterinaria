@@ -8,6 +8,7 @@
   var VetCare = (window.VetCare = window.VetCare || {});
   var config = VetCare.Config;
   var mockCache;
+  var mockBookingRequests = [];
 
   function requestId() {
     return "vc-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8);
@@ -57,7 +58,20 @@
         .split("/")[0] || "dashboard";
     return loadMockData().then(function (data) {
       var response;
-      if (method === "GET")
+      if (key === "booking-requests") {
+        if (method === "GET") response = mockBookingRequests.slice();
+        else {
+          response = $.extend(
+            {
+              id: "booking-" + Date.now(),
+              status: "solicitud_recibida",
+              createdAt: new Date().toISOString(),
+            },
+            body || {},
+          );
+          mockBookingRequests.push(response);
+        }
+      } else if (method === "GET")
         response = data[key] === undefined ? data : data[key];
       else response = $.extend(true, { id: "demo-" + Date.now() }, body || {});
       return normalize(
@@ -114,6 +128,7 @@
     getMockData: loadMockData,
     clearMockCache: function () {
       mockCache = null;
+      mockBookingRequests = [];
     },
   };
 })(window, window.jQuery);
