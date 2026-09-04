@@ -37,21 +37,23 @@
     <div class="vc-app">
       <div data-partial="topbar"></div>
       <main id="main-content" class="vc-main-content">
-        <div class="container-fluid">
-          <header class="vc-page-header">
-            <div>
+        <div class="container-fluid vc-dashboard-container">
+          <header class="vc-page-header row g-3 align-items-end">
+            <div class="col-12 col-md">
               <p class="vc-kicker">Portal del cliente</p>
               <h1>¡Hola, Roberto!</h1>
               <p>Consulta la salud y próximas citas de tus mascotas.</p>
             </div>
-            <a
-              class="btn btn-primary"
-              href="#"
-              data-action="show-toast"
-              data-toast-message="La reserva estará disponible en la Fase 3."
-              ><i class="bi bi-calendar-plus me-2" aria-hidden="true"></i
-              >Reservar cita</a
-            >
+            <div class="col-12 col-md-auto d-grid d-md-block">
+              <a
+                class="btn btn-primary"
+                href="#"
+                data-action="show-toast"
+                data-toast-message="La reserva estará disponible en la Fase 3."
+                ><i class="bi bi-calendar-plus me-2" aria-hidden="true"></i
+                >Reservar cita</a
+              >
+            </div>
           </header>
           <section class="row g-4 mb-4" aria-label="Resumen">
             <div class="col-sm-6 col-xl-3">
@@ -93,13 +95,20 @@
                     >Confirmada</span
                   >
                 </div>
-                <div class="vc-panel__body vc-appointment-detail">
-                  <div><span>Fecha</span><strong>Hoy, 15:30</strong></div>
-                  <div>
-                    <span>Profesional</span><strong>Dr. Alejandro Ramos</strong>
-                  </div>
-                  <div>
-                    <span>Consultorio</span><strong>Clínica Central</strong>
+                <div class="vc-panel__body">
+                  <div
+                    class="row row-cols-1 row-cols-md-3 g-3 vc-appointment-detail"
+                  >
+                    <div class="col">
+                      <span>Fecha</span><strong>Hoy, 15:30</strong>
+                    </div>
+                    <div class="col">
+                      <span>Profesional</span
+                      ><strong>Dr. Alejandro Ramos</strong>
+                    </div>
+                    <div class="col">
+                      <span>Consultorio</span><strong>Clínica Central</strong>
+                    </div>
                   </div>
                 </div>
               </article>

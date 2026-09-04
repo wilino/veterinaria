@@ -33,36 +33,39 @@
   <body class="vc-page" data-page="booking">
     <a class="vc-skip-link" href="#main-content">Saltar al formulario</a>
     <header class="vc-public-header">
-      <nav
-        class="container d-flex align-items-center justify-content-between gap-3 py-3"
-        aria-label="Navegación principal"
-      >
-        <a
-          class="vc-logo"
-          href="../index.html"
-          aria-label="VetCare Pro, inicio"
+      <nav class="navbar py-3" aria-label="Navegación principal">
+        <div
+          class="container d-flex align-items-center justify-content-between gap-3"
         >
-          <span class="vc-logo__icon"
-            ><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i
-          ></span>
-          <span>VetCare Pro</span>
-        </a>
-        <a class="btn btn-outline-secondary" href="../client/dashboard.html"
-          >Ingresar al portal</a
-        >
+          <a
+            class="vc-logo"
+            href="../index.html"
+            aria-label="VetCare Pro, inicio"
+          >
+            <span class="vc-logo__icon"
+              ><i class="bi bi-heart-pulse-fill" aria-hidden="true"></i
+            ></span>
+            <span>VetCare Pro</span>
+          </a>
+          <a class="btn btn-outline-secondary" href="../client/dashboard.html"
+            >Ingresar al portal</a
+          >
+        </div>
       </nav>
     </header>
 
     <main id="main-content" class="vc-public-main">
       <section class="vc-booking-hero">
         <div class="container">
-          <div class="vc-booking-hero__content">
-            <p class="vc-kicker">Atención veterinaria</p>
-            <h1>Solicita una cita para tu mascota</h1>
-            <p>
-              Completa estos datos y nuestro equipo confirmará la disponibilidad
-              contigo por el medio de contacto que prefieras.
-            </p>
+          <div class="row">
+            <div class="col-lg-8 col-xl-7">
+              <p class="vc-kicker">Atención veterinaria</p>
+              <h1>Solicita una cita para tu mascota</h1>
+              <p>
+                Completa estos datos y nuestro equipo confirmará la
+                disponibilidad contigo por el medio de contacto que prefieras.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -73,7 +76,7 @@
             <div class="col-lg-7">
               <form
                 id="booking-form"
-                class="needs-validation vc-booking-form"
+                class="needs-validation vstack gap-3"
                 novalidate
               >
                 <div
@@ -399,16 +402,16 @@
                   código de referencia:
                   <strong id="booking-reference" class="vc-numeric"></strong>.
                 </p>
-                <dl class="vc-booking-confirmation">
-                  <div>
+                <dl class="vc-booking-confirmation row g-3">
+                  <div class="col-12 col-md-4">
                     <dt>Mascota</dt>
                     <dd data-confirmation="pet"></dd>
                   </div>
-                  <div>
+                  <div class="col-12 col-md-4">
                     <dt>Servicio</dt>
                     <dd data-confirmation="service"></dd>
                   </div>
-                  <div>
+                  <div class="col-12 col-md-4">
                     <dt>Preferencia</dt>
                     <dd data-confirmation="schedule"></dd>
                   </div>
@@ -441,7 +444,10 @@
                     </p>
                   </div>
                 </div>
-                <dl class="vc-booking-summary__list" aria-live="polite">
+                <dl
+                  class="vc-booking-summary__list vstack gap-3"
+                  aria-live="polite"
+                >
                   <div>
                     <dt>Paciente</dt>
                     <dd data-summary="pet">Aún no indicado</dd>

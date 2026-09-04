@@ -12,10 +12,6 @@
     linear-gradient(115deg, var(--vc-color-navy), #123c47);
 }
 
-.vc-booking-hero__content {
-  max-width: 44rem;
-}
-
 .vc-booking-hero .vc-kicker {
   color: var(--vc-color-primary-fixed);
 }
@@ -36,11 +32,6 @@
 
 .vc-booking-section {
   padding-top: clamp(2rem, 5vw, 4rem);
-}
-
-.vc-booking-form {
-  display: grid;
-  gap: var(--vc-space-md);
 }
 
 .vc-booking-card {
@@ -137,15 +128,14 @@
 
 .vc-booking-summary__list,
 .vc-booking-confirmation {
-  display: grid;
-  gap: var(--vc-space-md);
   padding: var(--vc-space-lg);
   margin: 0;
 }
 
 .vc-booking-summary__list > div,
 .vc-booking-confirmation > div {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: var(--vc-space-xs);
 }
 
@@ -219,7 +209,6 @@
 }
 
 .vc-booking-confirmation {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   max-width: 42rem;
   margin: var(--vc-space-lg) auto;
   text-align: left;
@@ -240,9 +229,5 @@
 @media (max-width: 575.98px) {
   .vc-booking-actions > .btn {
     width: 100%;
-  }
-
-  .vc-booking-confirmation {
-    grid-template-columns: 1fr;
   }
 }

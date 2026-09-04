@@ -1,48 +1,52 @@
 <header class="vc-topbar">
-  <div class="d-flex align-items-center gap-2 flex-grow-1">
-    <button
-      class="btn btn-icon btn-outline-secondary d-xl-none"
-      type="button"
-      data-action="toggle-offcanvas"
-      data-target="#vc-mobile-navigation"
-      aria-label="Abrir menú"
-    >
-      <i class="bi bi-list" aria-hidden="true"></i>
-    </button>
-    <button
-      class="btn btn-icon btn-outline-secondary vc-sidebar-toggle"
-      type="button"
-      data-action="toggle-sidebar"
-      aria-label="Contraer barra lateral"
-      aria-expanded="true"
-    >
-      <i class="bi bi-layout-sidebar-inset" aria-hidden="true"></i>
-    </button>
-    <div class="vc-search d-none d-md-flex">
-      <i class="bi bi-search" aria-hidden="true"></i
-      ><label class="visually-hidden" for="global-search">Buscar</label
-      ><input
-        id="global-search"
-        type="search"
-        placeholder="Buscar paciente, chip o historia clínica"
-      />
+  <div
+    class="container-fluid vc-dashboard-container d-flex align-items-center gap-2"
+  >
+    <div class="d-flex align-items-center gap-2 flex-grow-1">
+      <button
+        class="btn btn-icon btn-outline-secondary d-xl-none"
+        type="button"
+        data-action="toggle-offcanvas"
+        data-target="#vc-mobile-navigation"
+        aria-label="Abrir menú"
+      >
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+      <button
+        class="btn btn-icon btn-outline-secondary vc-sidebar-toggle"
+        type="button"
+        data-action="toggle-sidebar"
+        aria-label="Contraer barra lateral"
+        aria-expanded="true"
+      >
+        <i class="bi bi-layout-sidebar-inset" aria-hidden="true"></i>
+      </button>
+      <div class="vc-search d-none d-md-flex">
+        <i class="bi bi-search" aria-hidden="true"></i
+        ><label class="visually-hidden" for="global-search">Buscar</label
+        ><input
+          id="global-search"
+          type="search"
+          placeholder="Buscar paciente, chip o historia clínica"
+        />
+      </div>
     </div>
-  </div>
-  <div class="d-flex align-items-center gap-2">
-    <button
-      class="btn btn-icon btn-outline-secondary"
-      type="button"
-      data-action="show-toast"
-      data-toast-message="No hay notificaciones nuevas."
-      aria-label="Ver notificaciones"
-    >
-      <i class="bi bi-bell" aria-hidden="true"></i>
-    </button>
-    <a class="vc-user-menu" href="#" aria-label="Abrir perfil de usuario"
-      ><span class="vc-user-menu__avatar">AR</span
-      ><span class="d-none d-sm-flex flex-column"
-        ><strong>Dr. Alejandro Ramos</strong><small>Veterinario</small></span
-      ></a
-    >
+    <div class="d-flex align-items-center gap-2">
+      <button
+        class="btn btn-icon btn-outline-secondary"
+        type="button"
+        data-action="show-toast"
+        data-toast-message="No hay notificaciones nuevas."
+        aria-label="Ver notificaciones"
+      >
+        <i class="bi bi-bell" aria-hidden="true"></i>
+      </button>
+      <a class="vc-user-menu" href="#" aria-label="Abrir perfil de usuario"
+        ><span class="vc-user-menu__avatar">AR</span
+        ><span class="d-none d-sm-flex flex-column"
+          ><strong>Dr. Alejandro Ramos</strong><small>Veterinario</small></span
+        ></a
+      >
+    </div>
   </div>
 </header>

@@ -37,22 +37,24 @@
     <div class="vc-app">
       <div data-partial="topbar"></div>
       <main id="main-content" class="vc-main-content">
-        <div class="container-fluid">
-          <header class="vc-page-header">
-            <div>
+        <div class="container-fluid vc-dashboard-container">
+          <header class="vc-page-header row g-3 align-items-end">
+            <div class="col-12 col-md">
               <p class="vc-kicker">Portal veterinario</p>
               <h1>Agenda médica del día</h1>
               <p>Gestiona pacientes y prioriza la atención clínica.</p>
             </div>
-            <button
-              class="btn btn-primary"
-              type="button"
-              data-action="show-toast"
-              data-toast-message="El registro de atención se habilitará en la Fase 4."
-            >
-              <i class="bi bi-plus-lg me-2" aria-hidden="true"></i>Nueva
-              atención
-            </button>
+            <div class="col-12 col-md-auto d-grid d-md-block">
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-action="show-toast"
+                data-toast-message="El registro de atención se habilitará en la Fase 4."
+              >
+                <i class="bi bi-plus-lg me-2" aria-hidden="true"></i>Nueva
+                atención
+              </button>
+            </div>
           </header>
           <section class="row g-4 mb-4">
             <div class="col-md-4">

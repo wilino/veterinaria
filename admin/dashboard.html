@@ -37,24 +37,26 @@
     <div class="vc-app">
       <div data-partial="topbar"></div>
       <main id="main-content" class="vc-main-content">
-        <div class="container-fluid">
-          <header class="vc-page-header">
-            <div>
+        <div class="container-fluid vc-dashboard-container">
+          <header class="vc-page-header row g-3 align-items-end">
+            <div class="col-12 col-md">
               <p class="vc-kicker">Administración</p>
               <h1>Consola de control clínico</h1>
               <p>
                 Resumen operativo preparado para la configuración e indicadores.
               </p>
             </div>
-            <button
-              class="btn btn-primary"
-              type="button"
-              data-action="show-toast"
-              data-toast-message="La gestión de usuarios se habilitará en la Fase 5."
-            >
-              <i class="bi bi-person-plus me-2" aria-hidden="true"></i>Nuevo
-              usuario
-            </button>
+            <div class="col-12 col-md-auto d-grid d-md-block">
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-action="show-toast"
+                data-toast-message="La gestión de usuarios se habilitará en la Fase 5."
+              >
+                <i class="bi bi-person-plus me-2" aria-hidden="true"></i>Nuevo
+                usuario
+              </button>
+            </div>
           </header>
           <section class="row g-4 mb-4">
             <div class="col-sm-6 col-xl-3">
